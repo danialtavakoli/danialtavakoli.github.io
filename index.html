@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Danial Tavakoli — Android Developer</title>
-<meta name="description" content="Android developer in Genoa, Italy. Kotlin, Jetpack Compose, Kotlin Multiplatform. MSc Computer Science, University of Genoa.">
+<title>Danial Tavakoli — Android Developer in Genoa, Italy</title>
+<meta name="description" content="Danial Tavakoli is an Android developer based in Genoa, Italy, working in Kotlin, Jetpack Compose and Kotlin Multiplatform. MSc Computer Science at the University of Genoa. Portfolio, experience and contact.">
 <meta name="author" content="Danial Tavakoli">
-<meta property="og:title" content="Danial Tavakoli — Android Developer">
+<meta property="og:title" content="Danial Tavakoli — Android Developer in Genoa, Italy">
 <meta property="og:description" content="Android developer in Genoa, Italy. Kotlin, Jetpack Compose, Kotlin Multiplatform.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://danialtavakoli.github.io/">
@@ -16,6 +16,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230E6B59'/><text y='.9em' x='50%' text-anchor='middle' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff'>D</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Danial Tavakoli",
+  "url": "https://danialtavakoli.github.io/",
+  "jobTitle": "Android Developer",
+  "email": "mailto:dnialtavakoli@gmail.com",
+  "knowsLanguage": ["en", "fa", "it"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Genoa", "addressRegion": "Liguria", "addressCountry": "IT" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Genoa", "url": "https://unige.it/en" },
+    { "@type": "CollegeOrUniversity", "name": "University of Isfahan", "url": "https://ui.ac.ir/en" }
+  ],
+  "worksFor": { "@type": "Organization", "name": "Widecons", "url": "https://www.widecons.com/" },
+  "knowsAbout": ["Android development","Kotlin","Jetpack Compose","Kotlin Multiplatform","Java","Python","Machine learning","Software engineering"],
+  "sameAs": [
+    "https://www.linkedin.com/in/danialtavakoli",
+    "https://github.com/danialtavakoli"
+  ]
+}
+</script>
 <style>
 :root{
   --bg:#FCFCFB; --surface:#FFFFFF; --surface-2:#F5F5F3;
@@ -155,6 +177,8 @@ p{margin:0 0 16px}
 .card ul{margin:0;padding-left:16px}
 .card li{font-size:14px;margin-bottom:7px;color:var(--muted);line-height:1.55}
 .card li:last-child{margin-bottom:0}
+.card li a{color:var(--ink-2);font-weight:500}
+.card li a:hover{color:var(--accent)}
 
 /* ---------- footer ---------- */
 footer{
@@ -211,7 +235,7 @@ footer a:hover{color:var(--accent)}
 
 <section class="intro">
   <p>I'm an Android developer based in Genoa. I build native apps in <strong>Kotlin</strong> and <strong>Jetpack Compose</strong>, and I use Kotlin Multiplatform where logic needs to be shared across platforms.</p>
-  <p>Most recently I've been working on an app for industrial environments at Widecons. Before that came Leopard, a multilingual attendance app that's live on Google Play, and an on-demand delivery app at Shipnow. I also write Python, Java and C#, and I'm interested in applying machine learning — my <a href="https://github.com/danialtavakoli/MalwareDetection">malware classifier</a> is where most of that has gone so far.</p>
+  <p>Most recently I've been working on an app for industrial environments at Widecons. Before that came Leopard, a multilingual attendance app that's live on Google Play, and an on-demand delivery app at Shipnow. I also write Python, Java and C#, and I'm interested in AI and LLMs.</p>
   <p>Teaching has run alongside all of it. I designed the Android and Advanced Java courses at Quera, ran AI workshops for senior managers at Mobarakeh Steel, and was a teaching assistant for Data Structures at the University of Isfahan and for CS50x Iran.</p>
 </section>
 
@@ -315,13 +339,6 @@ footer a:hover{color:var(--accent)}
   </div>
 
   <div class="proj">
-    <h3>Crypto Market Tracker</h3>
-    <p class="tech">Kotlin · Retrofit · Interactive charts · JUnit</p>
-    <p>A personal project, built because I follow the markets myself: live cryptocurrency prices, interactive historical charts across timeframes from 12 hours to all-time, and a market news feed. Unit-tested the chart adapter that maps API time-series data onto the chart component.</p>
-    <p class="pl"><a href="https://github.com/danialtavakoli/DanialCurrency">GitHub ↗</a></p>
-  </div>
-
-  <div class="proj">
     <h3>Bag-Shoe Store</h3>
     <p class="tech">MVVM · Kotlin Coroutines · LiveData · Koin · Retrofit</p>
     <p>A complete e-commerce flow — categories, shopping cart, profile section and payment portal integration — simulating real consumer transaction patterns.</p>
@@ -336,11 +353,11 @@ footer a:hover{color:var(--accent)}
     <dt>Android</dt><dd>Android SDK, Jetpack Compose, Kotlin Multiplatform (KMP/KMM), ViewModel, Room, Firebase, WebView, Material Design</dd>
     <dt>Architecture</dt><dd>MVVM, Hilt, Koin, SOLID principles, design patterns, object-oriented design</dd>
     <dt>Async &amp; APIs</dt><dd>Kotlin Coroutines, Kotlin Flow, LiveData, Retrofit, OkHttp, Ktor, REST, JSON</dd>
-    <dt>Data &amp; ML</dt><dd>scikit-learn, pandas, NumPy, Matplotlib, Jupyter; supervised classification, class-imbalance handling, hyperparameter tuning</dd>
-    <dt>Databases</dt><dd>SQL Server, MySQL, SQLite/Room; schema design, queries, transactions</dd>
+    <dt>Data &amp; ML</dt><dd>scikit-learn, pandas, NumPy, Matplotlib, Jupyter</dd>
+    <dt>Databases</dt><dd>SQL Server, MySQL, SQLite/Room</dd>
     <dt>Testing</dt><dd>JUnit, Espresso, code review, profiling and performance tuning</dd>
     <dt>Tooling</dt><dd>Git, GitHub, GitHub Actions (CI/CD), Gradle, Maven, Linux, Agile/Scrum</dd>
-    <dt>Also worked with</dt><dd>Django, Flutter/Dart, MATLAB, Mapbox, UI/UX</dd>
+    <dt>Also worked with</dt><dd>Django, Flutter/Dart, MATLAB, UI/UX</dd>
   </dl>
 </section>
 
@@ -364,20 +381,22 @@ footer a:hover{color:var(--accent)}
     <div class="card">
       <h3>Certificates &amp; awards</h3>
       <ul>
-        <li>CS50's Introduction to Computer Science — Harvard</li>
-        <li>CS50x Puzzle Day 2025</li>
+        <li><a href="https://certificates.cs50.io/95f021db-19a5-4dc3-b4d5-20c8783a7777.png?size=letter">CS50x — Introduction to Computer Science</a>, Harvard University · 2022</li>
+        <li>CS50x Puzzle Day — <a href="https://certificates.cs50.io/f898777d-329b-4c7b-96e2-e1464f727999">2025</a>, <a href="https://certificates.cs50.io/51d55b41-3f5f-4846-9514-0c73b5ad7e33">2024</a>, <a href="https://certificates.cs50.io/57083298-aecf-4aa4-81de-7fe6a0656847">2023</a> — 9 of 9 puzzles solved in 2025</li>
+        <li><a href="https://maktabkhooneh.org/certificates/MK-GAOZQE/">Android Development</a> — Maktabkhooneh · 2021</li>
+        <li><a href="https://www.sololearn.com/certificates/course/en/24053252/1160/landscape/png">Kotlin Development</a> — Sololearn · 2021</li>
+        <li>Ranked among the <a href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/italy.md">top GitHub users in Italy</a> by public contributions</li>
         <li>Tuition fee waiver, University of Isfahan</li>
-        <li>Ranked among the top GitHub users in Iran by public contributions</li>
-        <li>Android Development — Maktabkhooneh</li>
-        <li>Kotlin Development — Sololearn</li>
       </ul>
     </div>
     <div class="card">
       <h3>Volunteer</h3>
       <ul>
-        <li>Board member, Computer Engineering Scientific Association, University of Isfahan (2021–2023)</li>
-        <li>Partnership &amp; sponsorship, TEDxUniversityOfIsfahan (2021–2022)</li>
-        <li>Executive team, UICPC programming competition</li>
+        <li>Board member, Computer Engineering Scientific Association (UI SACE), <a href="https://ui.ac.ir/en">University of Isfahan</a> · 2021–2023</li>
+        <li>Executive team, UICPC programming contests, <a href="https://acm.ui.ac.ir/">UI ACM</a> · 2023–2024</li>
+        <li>Content creator and social media, UI AI Community · 2021–2023</li>
+        <li>Content creator, <a href="https://cs50x.ir/">CS50x Iran</a> summer course site · 2022</li>
+        <li>Partnership &amp; sponsorship, <a href="https://www.ted.com/tedx/events/49621">TEDxUniversityOfIsfahan</a> · 2021–2022</li>
       </ul>
     </div>
   </div>
@@ -388,7 +407,7 @@ footer a:hover{color:var(--accent)}
   <div class="skills">
     <dl>
       <dt>English</dt><dd>Professional working proficiency</dd>
-      <dt>Persian</dt><dd>Native</dd>
+      <dt>Persian</dt><dd>Native or bilingual proficiency</dd>
       <dt>Italian</dt><dd>Beginner, currently studying</dd>
     </dl>
   </div>
