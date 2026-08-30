@@ -5,128 +5,217 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Danial Tavakoli — Android Developer</title>
 <meta name="description" content="Android developer in Genoa, Italy. Kotlin, Jetpack Compose, Kotlin Multiplatform. MSc Computer Science, University of Genoa.">
+<meta name="author" content="Danial Tavakoli">
 <meta property="og:title" content="Danial Tavakoli — Android Developer">
 <meta property="og:description" content="Android developer in Genoa, Italy. Kotlin, Jetpack Compose, Kotlin Multiplatform.">
 <meta property="og:type" content="profile">
+<meta property="og:url" content="https://danialtavakoli.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://danialtavakoli.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230E6B59'/><text y='.9em' x='50%' text-anchor='middle' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff'>D</text></svg>">
 <style>
 :root{
-  --bg:#FBFAF7; --surface:#FFFFFF; --surface-2:#F4F2EC;
-  --ink:#14201C; --muted:#5A6B65; --line:#E3E1D9;
-  --accent:#0E6B59; --accent-soft:#E4F1EC;
-  --sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --bg:#FCFCFB; --surface:#FFFFFF; --surface-2:#F5F5F3;
+  --ink:#16191C; --ink-2:#3D444B; --muted:#6B7480; --line:#E5E6E3;
+  --accent:#0E6B59; --accent-2:#0B5749;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --shadow:0 1px 2px rgba(16,24,32,.04),0 4px 14px rgba(16,24,32,.045);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0F1512; --surface:#161E1A; --surface-2:#1C2622;
-    --ink:#E9EEEA; --muted:#93A39C; --line:#27322D;
-    --accent:#54C1A3; --accent-soft:#15302A;
+    --bg:#0E1113; --surface:#15191C; --surface-2:#1B2024;
+    --ink:#EDEFF1; --ink-2:#C2C9CE; --muted:#8B95A0; --line:#242A2F;
+    --accent:#4FC2A5; --accent-2:#6FD4BB;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0F1512; --surface:#161E1A; --surface-2:#1C2622;
-  --ink:#E9EEEA; --muted:#93A39C; --line:#27322D;
-  --accent:#54C1A3; --accent-soft:#15302A;
+  --bg:#0E1113; --surface:#15191C; --surface-2:#1B2024;
+  --ink:#EDEFF1; --ink-2:#C2C9CE; --muted:#8B95A0; --line:#242A2F;
+  --accent:#4FC2A5; --accent-2:#6FD4BB;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  font-feature-settings:"cv05" 1,"ss01" 1;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
 img{max-width:100%}
-.wrap{max-width:820px;margin:0 auto;padding:56px 22px 88px}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
-a:hover{border-bottom-color:currentColor}
+.wrap{max-width:768px;margin:0 auto;padding:0 24px 96px}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-2);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 
-/* header */
-header.top{border-bottom:1px solid var(--line);padding-bottom:30px;margin-bottom:8px}
-h1{font-size:clamp(32px,6vw,44px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em;font-weight:700}
-.role{font-size:17px;color:var(--ink);margin:0 0 6px;font-weight:500}
-.loc{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:0 0 22px}
-.links{display:flex;flex-wrap:wrap;gap:9px;margin:0}
-.links a{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
-  padding:7px 13px;border:1px solid var(--line);border-radius:3px;color:var(--muted);background:var(--surface);transition:all .15s}
-.links a:hover{color:var(--accent);border-color:var(--accent)}
-.links a.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.links a.primary:hover{opacity:.87}
+/* ---------- nav ---------- */
+nav.bar{
+  position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .2s;
+}
+nav.bar.stuck{border-bottom-color:var(--line)}
+nav.bar .inner{max-width:768px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+nav.bar .me{font-weight:600;font-size:14.5px;letter-spacing:-.01em;color:var(--ink)}
+nav.bar ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+nav.bar a{font-size:13.5px;color:var(--muted);font-weight:500}
+nav.bar a:hover{color:var(--accent);text-decoration:none}
+@media (max-width:620px){nav.bar ul{display:none}}
 
-/* sections */
-section{margin-top:52px}
-h2{font-size:13px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
-  margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--line);font-weight:500}
-p{margin:0 0 15px}
+/* ---------- header ---------- */
+header.top{padding:64px 0 34px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.avail{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 9%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 26%,transparent);
+  padding:5px 11px;border-radius:100px;margin:0 0 20px;
+}
+.avail .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+h1{font-size:clamp(34px,6.4vw,46px);line-height:1.05;margin:0 0 12px;letter-spacing:-.033em;font-weight:700}
+.role{font-size:18px;color:var(--ink-2);margin:0 0 8px;font-weight:500;letter-spacing:-.008em}
+.loc{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:var(--muted);margin:0 0 26px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.links a{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;
+  padding:8px 15px;border:1px solid var(--line);border-radius:7px;
+  color:var(--ink-2);background:var(--surface);transition:all .16s ease;
+}
+.links a:hover{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent);text-decoration:none;transform:translateY(-1px);box-shadow:var(--shadow)}
+.links svg{width:15px;height:15px;flex:none}
+
+/* ---------- sections ---------- */
+section{margin-top:58px;scroll-margin-top:70px}
+h2{
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 26px;font-weight:500;
+  display:flex;align-items:center;gap:14px;
+}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+p{margin:0 0 16px}
+.intro p{color:var(--ink-2);font-size:16.5px}
 .intro p:last-child{margin-bottom:0}
+.intro strong{color:var(--ink);font-weight:600}
 
-/* experience */
-.job{margin:0 0 30px}
+/* ---------- experience ---------- */
+.job{position:relative;padding-left:22px;margin:0 0 32px;border-left:2px solid var(--line)}
+.job::before{
+  content:"";position:absolute;left:-5px;top:8px;width:8px;height:8px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--line);
+}
+.job:first-of-type::before{border-color:var(--accent);background:var(--accent)}
 .job:last-child{margin-bottom:0}
-.jh{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-bottom:3px}
-.jt{font-weight:700;font-size:16.5px;margin:0}
-.jd{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
-.jm{font-size:14px;color:var(--muted);margin:0 0 9px}
-.job ul{margin:0;padding-left:19px}
-.job li{margin-bottom:6px;font-size:15px}
-.job li::marker{color:var(--accent)}
-.lead{font-size:15px;margin:0 0 8px}
+.jh{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 18px;margin-bottom:2px}
+.jt{font-weight:650;font-size:16.5px;margin:0;letter-spacing:-.012em}
+.jd{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap;letter-spacing:.02em}
+.jm{font-size:14px;color:var(--muted);margin:0 0 11px}
+.jm a{color:var(--ink-2);font-weight:500}
+.jm a:hover{color:var(--accent)}
+.lead{font-size:15.2px;margin:0 0 9px;color:var(--ink-2)}
+.job ul{margin:0;padding-left:18px}
+.job li{margin-bottom:7px;font-size:15px;color:var(--ink-2)}
+.job li:last-child{margin-bottom:0}
+.job li::marker{color:var(--muted)}
 
-/* projects */
-.proj{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:3px;padding:17px 19px;margin:0 0 13px}
-.proj h3{margin:0 0 4px;font-size:16px;font-weight:700}
-.proj .tech{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:0 0 9px;letter-spacing:.02em}
-.proj p{font-size:14.5px;margin:0 0 9px}
-.proj p:last-child{margin-bottom:0}
-.proj .pl{display:flex;gap:14px;flex-wrap:wrap}
-.proj .pl a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+/* ---------- projects ---------- */
+.proj{
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  padding:20px 22px;margin:0 0 14px;transition:border-color .16s,box-shadow .16s,transform .16s;
+}
+.proj:hover{border-color:color-mix(in srgb,var(--accent) 35%,transparent);box-shadow:var(--shadow);transform:translateY(-1px)}
+.proj h3{margin:0 0 5px;font-size:16.5px;font-weight:650;letter-spacing:-.012em}
+.proj .tech{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:0 0 11px;letter-spacing:.01em;line-height:1.6}
+.proj p{font-size:14.8px;margin:0 0 12px;color:var(--ink-2)}
+.proj .pl{display:flex;gap:16px;flex-wrap:wrap;margin:0}
+.proj .pl a{font-size:13px;font-weight:550;display:inline-flex;align-items:center;gap:5px}
 
-/* skills */
-.skills dl{margin:0;display:grid;grid-template-columns:minmax(140px,auto) 1fr;gap:11px 22px}
-.skills dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.skills dd{margin:0;font-size:15px}
-@media (max-width:560px){
-  .skills dl{grid-template-columns:1fr;gap:3px 0}
-  .skills dd{margin-bottom:12px}
+/* ---------- skills ---------- */
+.skills dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:14px 26px}
+.skills dt{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);padding-top:4px;
+}
+.skills dd{margin:0;font-size:15px;color:var(--ink-2)}
+@media (max-width:600px){
+  .skills dl{grid-template-columns:1fr;gap:2px 0}
+  .skills dd{margin-bottom:15px}
   .jd{white-space:normal}
 }
 
-/* education + lists */
-.ed{margin:0 0 20px}
+/* ---------- education & cards ---------- */
+.ed{margin:0 0 22px}
 .ed:last-child{margin-bottom:0}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:15px 17px}
-.card h3{margin:0 0 7px;font-size:14px;font-weight:700}
-.card ul{margin:0;padding-left:17px}
-.card li{font-size:14px;margin-bottom:5px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.card h3{margin:0 0 10px;font-size:13.5px;font-weight:650;letter-spacing:-.005em}
+.card ul{margin:0;padding-left:16px}
+.card li{font-size:14px;margin-bottom:7px;color:var(--muted);line-height:1.55}
 .card li:last-child{margin-bottom:0}
 
-footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;
-  display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
-footer a{color:var(--muted)}
+/* ---------- footer ---------- */
+footer{
+  margin-top:72px;padding-top:26px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13.5px;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;
+}
+footer a{color:var(--muted);font-weight:500}
+footer a:hover{color:var(--accent)}
+
+/* ---------- print ---------- */
+@media print{
+  nav.bar,.avail,.links{display:none}
+  body{background:#fff;color:#000;font-size:10.5pt;line-height:1.45}
+  .wrap{max-width:none;padding:0}
+  header.top{padding-top:0}
+  section{margin-top:20pt;page-break-inside:avoid}
+  .job,.proj,.card{page-break-inside:avoid}
+  .proj,.card{border:1px solid #ccc;box-shadow:none}
+  a{color:#000;text-decoration:none}
+  h2{color:#444}
+}
 </style>
 </head>
 <body>
+
+<nav class="bar" id="nav">
+  <div class="inner">
+    <span class="me">Danial Tavakoli</span>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="wrap">
 
 <header class="top">
+  <p class="avail"><span class="dot"></span>Open to new roles</p>
   <h1>Danial Tavakoli</h1>
   <p class="role">Android Developer — Kotlin, Jetpack Compose, Kotlin Multiplatform</p>
   <p class="loc">Genoa, Italy · MSc Computer Science, University of Genoa</p>
-  <nav class="links">
-    <a class="primary" href="Danial_Tavakoli_CV.pdf">Download CV</a>
-    <a href="mailto:dnialtavakoli@gmail.com">Email</a>
-    <a href="https://github.com/danialtavakoli">GitHub</a>
-    <a href="https://www.linkedin.com/in/danialtavakoli">LinkedIn</a>
-  </nav>
+  <ul class="links">
+    <li><a href="mailto:dnialtavakoli@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email</a></li>
+    <li><a href="https://github.com/danialtavakoli">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.2 4.7 18.2 5 18.2 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.5C24 5.9 18.6.5 12 .5z"/></svg>GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/danialtavakoli">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zm1.8 13H3.5V9h3.6v11.4zM22.2 0H1.8A1.8 1.8 0 0 0 0 1.8v20.4C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.8V1.8c0-1-.8-1.8-1.8-1.8z"/></svg>LinkedIn</a></li>
+  </ul>
 </header>
 
 <section class="intro">
-  <p>I'm an Android developer based in Genoa. I build native apps in Kotlin and Jetpack Compose, and I use Kotlin Multiplatform where logic needs to be shared across platforms.</p>
+  <p>I'm an Android developer based in Genoa. I build native apps in <strong>Kotlin</strong> and <strong>Jetpack Compose</strong>, and I use Kotlin Multiplatform where logic needs to be shared across platforms.</p>
   <p>Most recently I've been working on an app for industrial environments at Widecons. Before that came Leopard, a multilingual attendance app that's live on Google Play, and an on-demand delivery app at Shipnow. I also write Python, Java and C#, and I'm interested in applying machine learning — my <a href="https://github.com/danialtavakoli/MalwareDetection">malware classifier</a> is where most of that has gone so far.</p>
   <p>Teaching has run alongside all of it. I designed the Android and Advanced Java courses at Quera, ran AI workshops for senior managers at Mobarakeh Steel, and was a teaching assistant for Data Structures at the University of Isfahan and for CS50x Iran.</p>
 </section>
 
-<section>
+<section id="experience">
   <h2>Experience</h2>
 
   <div class="job">
@@ -206,42 +295,41 @@ footer a{color:var(--muted)}
       <li>Part of the teaching-assistant team for CS50x Iran, the local delivery of Harvard's CS50, running hands-on debugging sessions through students' own failing code rather than handing over answers.</li>
     </ul>
   </div>
-
 </section>
 
-<section>
+<section id="projects">
   <h2>Projects</h2>
 
   <div class="proj">
     <h3>Leopard — attendance management</h3>
     <p class="tech">Kotlin Multiplatform · Jetpack Compose · MVVM · Ktor · Coroutines · Hilt</p>
     <p>A multilingual organisational attendance app built on a single Kotlin Multiplatform codebase, live on Google Play with over 1,000 installs. I worked on multi-language support through a locale-aware resource layer.</p>
-    <p class="pl"><a href="https://play.google.com/store/apps/details?id=com.attendance.leopard.and">Google Play →</a></p>
+    <p class="pl"><a href="https://play.google.com/store/apps/details?id=com.attendance.leopard.and">Google Play ↗</a></p>
   </div>
 
   <div class="proj">
     <h3>Android Malware Detection</h3>
     <p class="tech">Python · scikit-learn · pandas · NumPy · Matplotlib · imbalanced-learn · Jupyter</p>
     <p>A binary classifier over the TUANDROMD dataset — 4,465 Android applications, 241 permission-based features — comparing logistic regression against a random forest. I corrected the class imbalance with SMOTEN, split with stratified sampling, and tuned through cross-validated grid search. Evaluated on recall and F1 rather than accuracy alone, because a missed malware sample costs more than a false alarm: roughly 99.7% accuracy with 100% recall on the held-out set.</p>
-    <p class="pl"><a href="https://github.com/danialtavakoli/MalwareDetection">GitHub →</a></p>
+    <p class="pl"><a href="https://github.com/danialtavakoli/MalwareDetection">GitHub ↗</a></p>
   </div>
 
   <div class="proj">
     <h3>Crypto Market Tracker</h3>
     <p class="tech">Kotlin · Retrofit · Interactive charts · JUnit</p>
     <p>A personal project, built because I follow the markets myself: live cryptocurrency prices, interactive historical charts across timeframes from 12 hours to all-time, and a market news feed. Unit-tested the chart adapter that maps API time-series data onto the chart component.</p>
-    <p class="pl"><a href="https://github.com/danialtavakoli/DanialCurrency">GitHub →</a></p>
+    <p class="pl"><a href="https://github.com/danialtavakoli/DanialCurrency">GitHub ↗</a></p>
   </div>
 
   <div class="proj">
     <h3>Bag-Shoe Store</h3>
     <p class="tech">MVVM · Kotlin Coroutines · LiveData · Koin · Retrofit</p>
     <p>A complete e-commerce flow — categories, shopping cart, profile section and payment portal integration — simulating real consumer transaction patterns.</p>
-    <p class="pl"><a href="https://github.com/danialtavakoli/DanialBazaar">GitHub →</a></p>
+    <p class="pl"><a href="https://github.com/danialtavakoli/DanialBazaar">GitHub ↗</a></p>
   </div>
 </section>
 
-<section class="skills">
+<section id="skills" class="skills">
   <h2>Skills</h2>
   <dl>
     <dt>Languages</dt><dd>Kotlin, Java, Python, C#, SQL, C++</dd>
@@ -256,7 +344,7 @@ footer a{color:var(--muted)}
   </dl>
 </section>
 
-<section>
+<section id="education">
   <h2>Education</h2>
   <div class="ed">
     <div class="jh"><p class="jt">MSc, Computer Science (Software Engineering)</p><span class="jd">Sep 2025 — Present</span></div>
@@ -308,9 +396,18 @@ footer a{color:var(--muted)}
 
 <footer>
   <span>Genoa, Italy · <a href="mailto:dnialtavakoli@gmail.com">dnialtavakoli@gmail.com</a></span>
-  <span><a href="https://github.com/danialtavakoli">GitHub</a> · <a href="https://www.linkedin.com/in/danialtavakoli">LinkedIn</a> · <a href="Danial_Tavakoli_CV.pdf">CV</a></span>
+  <span><a href="https://github.com/danialtavakoli">GitHub</a> · <a href="https://www.linkedin.com/in/danialtavakoli">LinkedIn</a></span>
 </footer>
 
 </div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ nav.classList.toggle('stuck', window.scrollY>8); };
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>
